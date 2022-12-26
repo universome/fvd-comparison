@@ -3,6 +3,8 @@
 In this repo, we demonstrate that the FVD implementation from StyleGAN-V paper is equivalent to the [original one](https://github.com/google-research/google-research/blob/master/frechet_video_distance/frechet_video_distance.py) when the videos are already loaded into memory and resized to a necessary resolution.
 The main difference of our FVD evaluation protocol from the paper is that we strictly specify how data should be processed, clips sampled, etc.
 
+**Disclaimer: this repo is just for verifying that our pytorch FVD implementation is identical to the [one from tensorflow](https://github.com/google-research/google-research/blob/master/frechet_video_distance/frechet_video_distance.py). If you want to compute FVD on your videos — please, use the `src/scripts/calc_metrics_for_dataset.py` script in the [main repo](https://github.com/universome/stylegan-v).**
+
 # Why did we implement FVD ourselves?
 
 The problem with the [original implementation](https://github.com/google-research/google-research/blob/master/frechet_video_distance/frechet_video_distance.py) is that it does not handle:
